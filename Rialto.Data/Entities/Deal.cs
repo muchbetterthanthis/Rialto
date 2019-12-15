@@ -1,17 +1,18 @@
-﻿using Rialto.Data.Entities.LotAgregate;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Rialto.Data.Interfaces;
+
 namespace Rialto.Data.Entities
 {
-    public abstract class Deal
+    public class Deal
     {
-        public int id { get; set; }
-        public Lot LotForSale { get; set; }
+        public int ID { get; set; }
+        public ILot Lot { get; set; }
+        public int NumberOfLots { get; set; }
         public DateTime DateOfCreation { get; set; }
-        public double NumberOfLots { get; set; }
     }
 }

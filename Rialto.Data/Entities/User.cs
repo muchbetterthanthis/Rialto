@@ -8,7 +8,7 @@ namespace Rialto.Data.Entities
 {
     public class User
     {
-        public int UserId { get; set; }
+        public int ID { get; set; }
         public List<Deal> Deals { get; set; }
     }
 }

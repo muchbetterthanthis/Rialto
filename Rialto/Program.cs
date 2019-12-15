@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rialto.Data.Entities
+namespace Rialto
 {
-    public class Bet : Deal
+    class Program
     {
-        public int id { get; set; }
-        public int Betid { get; set; }
-
+        static void Main(string[] args)
+        {
+        }
     }
 }

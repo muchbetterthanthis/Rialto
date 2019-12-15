@@ -1,0 +1,7 @@
+C:\studying_19-20\Rialto\Rialto\bin\Debug\Rialto.exe.config
+C:\studying_19-20\Rialto\Rialto\bin\Debug\Rialto.exe
+C:\studying_19-20\Rialto\Rialto\bin\Debug\Rialto.pdb
+C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.csproj.CoreCompileInputs.cache
+C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.exe
+C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.pdb
+C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.csprojAssemblyReference.cache

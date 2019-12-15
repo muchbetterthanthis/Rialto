@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{628B6048-62D8-4DE1-96A2-7CB50B001087}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rialto.Domain</RootNamespace>
-    <AssemblyName>Rialto.Domain</AssemblyName>
+    <ProjectGuid>{B54FB21A-2267-406F-BB96-5C7410CFE19E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Rialto</RootNamespace>
+    <AssemblyName>Rialto</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,22 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IAddLots.cs" />
-    <Compile Include="Interfaces\IChangePriceService.cs" />
-    <Compile Include="Interfaces\IShowService.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ChangePriceService.cs" />
-    <Compile Include="Services\LotService.cs" />
-    <Compile Include="Services\ShowConsoleService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementations\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Rialto.Data\Rialto.Data.csproj">
-      <Project>{e16e6690-028b-4e96-8a26-705d247fdc62}</Project>
-      <Name>Rialto.Data</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

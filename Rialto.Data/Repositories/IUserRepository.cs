@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rialto.Data.Entities
+using Rialto.Data.Entities;
+
+namespace Rialto.Data.Repositories
 {
-    public class Futures : Deal
+    public interface IUserRepository
     {
-        public DateTime TransactionTime { get; set; }
+        List<Deal> GetAllDeals();
     }
 }

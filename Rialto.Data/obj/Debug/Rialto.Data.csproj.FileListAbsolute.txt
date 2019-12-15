@@ -1,0 +1,6 @@
+C:\studying_19-20\Rialto\Rialto.Data\bin\Debug\Rialto.Data.dll
+C:\studying_19-20\Rialto\Rialto.Data\bin\Debug\Rialto.Data.pdb
+C:\studying_19-20\Rialto\Rialto.Data\obj\Debug\Rialto.Data.csprojAssemblyReference.cache
+C:\studying_19-20\Rialto\Rialto.Data\obj\Debug\Rialto.Data.csproj.CoreCompileInputs.cache
+C:\studying_19-20\Rialto\Rialto.Data\obj\Debug\Rialto.Data.dll
+C:\studying_19-20\Rialto\Rialto.Data\obj\Debug\Rialto.Data.pdb

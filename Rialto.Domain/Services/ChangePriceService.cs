@@ -4,30 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Rialto.Data.Entities.LotAgregate;
+using Rialto.Data.Interfaces;
+using Rialto.Data.Repositories;
 using Rialto.Domain.Interfaces;
 
 namespace Rialto.Domain.Services
 {
-    //public class TestRepoImplementation : IRepository {
-    //    getAllLosts() {
-    //        return new List<>
-    //    }
-    //}
-
     public class ChangePriceService : IChangePriceService
     {
-        //public ChangePriceService(IRepository repo) {
-        //}
+        private ILotRepository _lotRepository;
 
-        public void changePrice(List<Lot> lotsToChange)
+        public ChangePriceService(ILotRepository lotRepository) {
+            _lotRepository = lotRepository;
+        }
+
+        public void changePrice()
         {
+            List<ILot> lotsToChange = _lotRepository.GetAllLots();
             int randomLot = getRandomLotNumber(lotsToChange);
 
             lotsToChange[randomLot].changePrice(lotsToChange[randomLot].Price * 0.1F);
         }
 
-        private int getRandomLotNumber(List<Lot> lotsToChange)
+        private int getRandomLotNumber(List<ILot> lotsToChange)
         {
             return new Random().Next(lotsToChange.Count);
         }

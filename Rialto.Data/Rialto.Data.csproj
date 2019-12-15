@@ -41,16 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Bet.cs" />
+    <Compile Include="Entities\BetAgregate\Bet.cs" />
+    <Compile Include="Entities\BetAgregate\BetDynamic.cs" />
     <Compile Include="Entities\Deal.cs" />
-    <Compile Include="Entities\Future.cs" />
-    <Compile Include="Entities\LotAgregate\Lot.cs" />
-    <Compile Include="Entities\LotAgregate\LotDynamic.cs" />
+    <Compile Include="Entities\FutureAgregate\Future.cs" />
+    <Compile Include="Entities\FutureAgregate\FutureDynamic.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\ILot.cs" />
+    <Compile Include="Interfaces\ILotDynamic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ILotRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
