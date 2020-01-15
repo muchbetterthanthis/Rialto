@@ -11,6 +11,7 @@ namespace Rialto.EF.Migrations
     using Rialto.Data.Entities;
     using Rialto.Data.Interfaces;
     using Rialto.Data.LotAgregate;
+    using Rialto.EF.Repositories;
     internal sealed class Configuration : DbMigrationsConfiguration<Rialto.EF.RIaltoContext>
     {
         public Configuration()

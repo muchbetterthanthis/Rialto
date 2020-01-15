@@ -12,8 +12,10 @@ using Rialto.Data.Interfaces;
 
 namespace Rialto.EF
 {
-    class RIaltoContext : DbContext
+    public class RIaltoContext : DbContext
     {
+        public RIaltoContext() : base("RIaltoContext")
+        { }
         
        
         public DbSet<Bet> _Bets { get; set; }
@@ -22,14 +24,14 @@ namespace Rialto.EF
         public DbSet<Futures> _Futers { get; set; }
        public DbSet<LotDynamic> lotDynamics { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Lot>().HasMany(t => t.Dynamics).WithRequired(c => c.Lot);
-            modelBuilder.Entity<Futures>().HasRequired(x => x.Lot);
+            modelBuilder.Entity<Futures>().HasRequired(x => x.Lot)
             modelBuilder.Entity<Bet>().HasRequired(z => z.Lot);
             modelBuilder.Entity<User>().HasMany(h => h._Bets).WithRequired(j => j.User);
             modelBuilder.Entity<User>().HasMany(u => u._Futures).WithRequired(i => i.User);
-        }
+        }*/
     }
 }
