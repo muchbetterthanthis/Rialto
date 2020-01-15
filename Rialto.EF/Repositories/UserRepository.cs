@@ -46,20 +46,14 @@ namespace Rialto.EF.Repositories
             }
         }
 
-        public List<Rialto.Data.Entities.Bet> GetAllBets(int id)
+        public List<Rialto.Data.Interfaces.IDeal> GetAllBets(int id)
         {
                 using (var ctx = new RIaltoContext())
                 {
-                  return ctx._Users.FirstOrDefault(i => i.ID == id)._Bets;
+                  return ctx._Users.FirstOrDefault(i => i.ID == id).Deals;
                 }
         }
 
-        public List<Rialto.Data.Entities.Futures> GetAllFuters(int id)
-        {
-            using (var ctx = new RIaltoContext())
-            {
-                return ctx._Users.FirstOrDefault(i => i.ID == id)._Futures;
-            }
-        }
+       
     }
 }

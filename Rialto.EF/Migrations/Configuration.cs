@@ -55,8 +55,18 @@ namespace Rialto.EF.Migrations
                 new User
                 {
                     ID = 1,
-                    _Bets = null,
-                    _Futures = null
+                    Deals = new List<IDeal>
+                    {
+                        new Bet
+                {
+                    ID=1,
+                    Lot = context._Lots.Find(1),
+                    NumberOfLots = 20,
+                    User = context._Users.Find(1),
+                    DateOfCreation = DateTime.Today
+                 }
+                 }
+
                 }
                 );
             context._Bets.AddOrUpdate(

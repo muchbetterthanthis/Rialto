@@ -13,7 +13,7 @@ namespace Rialto.EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202001152041027_Initial"; }
+            get { return "202001152143512_Initial"; }
         }
         
         string IMigrationMetadata.Source

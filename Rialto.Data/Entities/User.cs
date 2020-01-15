@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rialto.Data.Interfaces;
 
 namespace Rialto.Data.Entities
 {
     public class User
     {
         public int ID { get; set; }
-        public List<Bet> _Bets { get; set; } = null;
-        public List<Futures> _Futures { get; set; } = null;
+        public List<IDeal> Deals { get; set; }
     }
 }
