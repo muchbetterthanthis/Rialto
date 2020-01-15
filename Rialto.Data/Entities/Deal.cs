@@ -8,13 +8,13 @@ using Rialto.Data.LotAgregate;
 
 namespace Rialto.Data.Entities
 {
-    public abstract class Deal
+    public interface IDeal
     {
-        public int ID { get; set; }
-        public Lot Lot { get; set; }
-        public int NumberOfLots { get; set; }
-        public DateTime DateOfCreation { get; set; }
+        int ID { get; set; }
+        Lot Lot { get; set; }
+        int NumberOfLots { get; set; }
+        DateTime DateOfCreation { get; set; }
 
-        public abstract double getProfit();
+        double getProfit();
     }
 }

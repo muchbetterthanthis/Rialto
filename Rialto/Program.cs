@@ -18,7 +18,7 @@ namespace Rialto
             
         }
 
-        private void ParseArguments(List<string> argumentsString)
+        public void ParseArguments(List<string> argumentsString)
         {
             
         }
@@ -32,7 +32,8 @@ namespace Rialto
     public class CommandFactory : ICommandFactory
     {
         private static Dictionary<string, Type> registeredCommands = {
-            { "cet", typeof(ShowCommand) }
+            { "help", string },
+            { }
         };
 
 

@@ -10,6 +10,6 @@ namespace Rialto.Data.Entities
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public List<Deal> Deals { get; set; }
+        public List<IDeal> Deals { get; set; }
     }
 }
