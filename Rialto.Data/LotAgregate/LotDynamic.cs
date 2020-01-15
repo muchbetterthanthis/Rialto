@@ -4,20 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Rialto.Data.Interfaces;
-
-namespace Rialto.Data.Entities.BetAgregate
+namespace Rialto.Data.LotAgregate
 {
-    public class BetDynamic : ILotDynamic
+    public class LotDynamic
     {
         public int ID { get; set; }
         public DateTime DateOfChange { get; set; }
-        public float Price { get; set; }
+        public double Delta { get; set; }
 
-        public BetDynamic(DateTime DateOfChange, float newPrice)
+        public LotDynamic(DateTime DateOfChange, double Delta)
         {
             this.DateOfChange = DateOfChange;
-            this.Price = newPrice;
+            this.Delta = Delta;
         }
     }
 }

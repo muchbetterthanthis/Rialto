@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Rialto.Data.Entities
 {
-    public class User
+    public class Bet : Deal
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public List<Deal> Deals { get; set; }
+        public override double getProfit()
+        {
+            return Lot.getCurrentPrice() * NumberOfLots;
+        }
     }
 }
