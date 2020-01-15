@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Rialto.Data.Repositories;
+using Rialto.Data.LotAgregate;
+using Rialto.Data.Interfaces;
 
 namespace Rialto.EF.Repositories
 {
@@ -11,7 +12,7 @@ namespace Rialto.EF.Repositories
     {
         public LotRepository()
         { }
-        public void CreateLot(Data.Entities.Lot lot)
+        public void CreateLot(Data.LotAgregate.Lot lot)
         {
             using (var ctx = new RIaltoContext())
             {
@@ -20,7 +21,7 @@ namespace Rialto.EF.Repositories
             }
         }
 
-        public void UpdateLot(Data.Entities.Lot lot)
+        public void UpdateLot(Data.LotAgregate.Lot lot)
         {
             using (var ctx = new RIaltoContext())
             {
@@ -30,7 +31,7 @@ namespace Rialto.EF.Repositories
             }
         }
 
-        public void DeleteLot(Data.Entities.Lot lot)
+        public void DeleteLot(Data.LotAgregate.Lot lot)
         {
             using (var ctx = new RIaltoContext())
             {

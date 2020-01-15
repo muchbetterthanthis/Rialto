@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Rialto.Data.LotAgregate;
 using System.Threading.Tasks;
+
 
 namespace Rialto.Data.Interfaces
 {
-    public interface ILot
+    public interface IDeal
     {
         int ID { get; set; }
-        string Name { get; set; }
-        float Price { get; set; }
-        List<ILotDynamic> Dynamics { get; set; }
+        Lot Lot { get; set; }
+        int NumberOfLots { get; set; }
+        DateTime DateOfCreation { get; set; }
 
-        void changePrice(float newPrice);
         double getProfit();
     }
 }

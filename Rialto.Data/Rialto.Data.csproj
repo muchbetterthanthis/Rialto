@@ -121,19 +121,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BetAgregate\Bet.cs" />
-    <Compile Include="Entities\BetAgregate\BetDynamic.cs" />
-    <Compile Include="Entities\Deal.cs" />
-    <Compile Include="Entities\FuturesAgregate\Futures.cs" />
-    <Compile Include="Entities\FuturesAgregate\FuturesDynamic.cs" />
-    <Compile Include="Entities\Lot.cs" />
-    <Compile Include="Entities\LotDynamic.cs" />
+    <Compile Include="Entities\Bet.cs" />
+    <Compile Include="Entities\Futures.cs" />
+    <Compile Include="LotAgregate\Lot.cs" />
+    <Compile Include="LotAgregate\LotDynamic.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Interfaces\ILot.cs" />
-    <Compile Include="Interfaces\ILotDynamic.cs" />
+    <Compile Include="Interfaces\IDeal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ILotRepository.cs" />
-    <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

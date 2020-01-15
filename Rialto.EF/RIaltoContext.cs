@@ -6,8 +6,9 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Text;
 using System.Threading.Tasks;
-using Rialto.Data.Entities.FutureAgregate;
-using Rialto.Data.Entities.BetAgregate;
+using Rialto.Data.LotAgregate;
+using Rialto.Data.Interfaces;
+
 
 namespace Rialto.EF
 {
@@ -28,7 +29,8 @@ namespace Rialto.EF
             modelBuilder.Entity<Lot>().HasMany(t => t.Dynamics).WithRequired(c => c.Lot);
             modelBuilder.Entity<Futures>().HasRequired(x => x.Lot);
             modelBuilder.Entity<Bet>().HasRequired(z => z.Lot);
-            modelBuilder.Entity<User>().HasRequired(h=>h._Bets).
+            modelBuilder.Entity<User>().HasMany(h => h._Bets).WithRequired(j => j.User);
+            modelBuilder.Entity<User>().HasMany(u => u._Futures).WithRequired(i => i.User);
 
         }
     }
