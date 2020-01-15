@@ -39,5 +39,13 @@ namespace Rialto.EF.Repositories
                 ctx.SaveChanges();
             }
         }
+
+        public List<Rialto.Data.LotAgregate.Lot> GetAllLots()
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                return ctx._Lots.ToList();
+            }
+        }
     }
 }

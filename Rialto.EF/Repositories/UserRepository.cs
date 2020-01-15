@@ -37,5 +37,29 @@ namespace Rialto.EF.Repositories
                 ctx.SaveChanges();
             }
         }
+
+        public Rialto.Data.Entities.User GetUser(int id)
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                return ctx._Users.FirstOrDefault(r => r.ID == id);
+            }
+        }
+
+        public List<Rialto.Data.Entities.Bet> GetAllBets(int id)
+        {
+                using (var ctx = new RIaltoContext())
+                {
+                  return ctx._Users.FirstOrDefault(i => i.ID == id)._Bets;
+                }
+        }
+
+        public List<Rialto.Data.Entities.Futures> GetAllFuters(int id)
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                return ctx._Users.FirstOrDefault(i => i.ID == id)._Futures;
+            }
+        }
     }
 }

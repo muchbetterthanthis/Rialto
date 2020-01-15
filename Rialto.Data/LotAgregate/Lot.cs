@@ -14,8 +14,8 @@ namespace Rialto.Data.LotAgregate
         public int ID { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public List<LotDynamic> Dynamics { get; set; }
-
+        public List<LotDynamic> Dynamics { get; set; } = null;
+        public Lot() { }
         public Lot(DateTime dateOfCreation, double initialPrice)
         {
             Dynamics.Add(new LotDynamic(dateOfCreation, initialPrice));

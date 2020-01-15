@@ -14,8 +14,7 @@ namespace Rialto.EF
 {
     class RIaltoContext : DbContext
     {
-        public RIaltoContext() : base("DbConnection")
-        { }
+        
        
         public DbSet<Bet> _Bets { get; set; }
         public DbSet<User> _Users { get; set; }
@@ -31,7 +30,6 @@ namespace Rialto.EF
             modelBuilder.Entity<Bet>().HasRequired(z => z.Lot);
             modelBuilder.Entity<User>().HasMany(h => h._Bets).WithRequired(j => j.User);
             modelBuilder.Entity<User>().HasMany(u => u._Futures).WithRequired(i => i.User);
-
         }
     }
 }
