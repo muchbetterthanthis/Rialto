@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Rialto.Implementations
 {
-    public class ShowHudCommand : ICommand
+    public class NoSuchCommand : ICommand
     {
-        public string Name { get; set; } = "show_hud";
+        public string Name { get; set; } = "no_such_command";
 
         public void Execute(params object[] parameters)
         {
-            Console.WriteLine("***I'M SHOWING HUD***");
+            Console.WriteLine("No such command found");
         }
     }
 }
