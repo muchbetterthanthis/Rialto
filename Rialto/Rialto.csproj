@@ -43,6 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\CommandFactory.cs" />
+    <Compile Include="Implementations\CommandHandlerFactory.cs" />
+    <Compile Include="Implementations\ConsoleCommandHandler.cs" />
+    <Compile Include="Implementations\ShowHudCommand.cs" />
+    <Compile Include="Implementations\UserMenu.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\ICommandFactory.cs" />
+    <Compile Include="Interfaces\ICommandHandler.cs" />
+    <Compile Include="Interfaces\ICommandHandlerFactory.cs" />
+    <Compile Include="Interfaces\IMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
