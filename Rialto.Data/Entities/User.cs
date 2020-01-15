@@ -9,6 +9,7 @@ namespace Rialto.Data.Entities
     public class User
     {
         public int ID { get; set; }
-        public List<Deal> Deals { get; set; }
+        public List<Bet> _Bets { get; set; }
+        public List<Futures> _Futures { get; set; }
     }
 }

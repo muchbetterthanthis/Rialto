@@ -6,7 +6,36 @@ using System.Threading.Tasks;
 
 namespace Rialto.EF.Repositories
 {
-    class UserRepository
+    public class UserRepository
     {
+        public UserRepository()
+        { }
+        public void CreateUser(Data.Entities.User user)
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                ctx._Users.Add(user);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void UpdateUser(Data.Entities.User user)
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                ctx._Users.Attach(user);
+                ctx.Entry(user).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+            }
+        }
+
+        public void DeleteUser(Data.Entities.User user)
+        {
+            using (var ctx = new RIaltoContext())
+            {
+                ctx._Users.Remove(user);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

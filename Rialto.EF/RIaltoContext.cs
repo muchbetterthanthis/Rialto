@@ -11,16 +11,25 @@ using Rialto.Data.Entities.BetAgregate;
 
 namespace Rialto.EF
 {
-    class RIaltoContext
+    class RIaltoContext : DbContext
     {
         public RIaltoContext() : base("DbConnection")
         { }
-        public DbSet<Bet> Bets { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Lot> Lots { get; set; }
+       
+        public DbSet<Bet> _Bets { get; set; }
+        public DbSet<User> _Users { get; set; }
+        public DbSet<Lot> _Lots { get; set; }
         public DbSet<Futures> _Futers { get; set; }
-        public DbSet<FuturesDynamic> _FuturesDynamics { get; set; }
-        public DbSet<BetDynamic> _BetDynamics { get; set; }
+       public DbSet<LotDynamic> lotDynamics { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<Lot>().HasMany(t => t.Dynamics).WithRequired(c => c.Lot);
+            modelBuilder.Entity<Futures>().HasRequired(x => x.Lot);
+            modelBuilder.Entity<Bet>().HasRequired(z => z.Lot);
+            modelBuilder.Entity<User>().HasRequired(h=>h._Bets).
+
+        }
     }
 }

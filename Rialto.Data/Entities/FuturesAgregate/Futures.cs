@@ -12,8 +12,7 @@ namespace Rialto.Data.Entities
     public class Futures : ILot
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public float Price { get; set; }
+       public Lot Lot { get; set; }
         public List<ILotDynamic> Dynamics { get; set; }
 
         public void changePrice(float newPrice)
