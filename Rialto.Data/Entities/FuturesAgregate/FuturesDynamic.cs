@@ -8,7 +8,7 @@ using Rialto.Data.Interfaces;
 
 namespace Rialto.Data.Entities.FutureAgregate
 {
-    public class FutureDynamic : ILotDynamic
+    public class FuturesDynamic : ILotDynamic
     {
         public int ID { get; set; }
         public DateTime DateOfChange { get; set; }
