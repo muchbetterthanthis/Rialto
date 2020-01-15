@@ -1,8 +1,8 @@
 .vs/
 Rialto.Data/bin/
-Rialto.Data/bin/
+Rialto.Data/obj/
+Rialto.Domain/bin/
 Rialto.Domain/obj/
-Rialto.Domain/obj/
-Rialto.EF/obj/
+Rialto.EF/bin/
 Rialto.EF/obj/
 packages/
