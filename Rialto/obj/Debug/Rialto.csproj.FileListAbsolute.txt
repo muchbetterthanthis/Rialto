@@ -5,3 +5,6 @@ C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.csproj.CoreCompileInputs.cache
 C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.exe
 C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.pdb
 C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.csprojAssemblyReference.cache
+C:\studying_19-20\Rialto\Rialto\bin\Debug\Rialto.Data.dll
+C:\studying_19-20\Rialto\Rialto\bin\Debug\Rialto.Data.pdb
+C:\studying_19-20\Rialto\Rialto\obj\Debug\Rialto.csproj.CopyComplete

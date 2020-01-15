@@ -46,8 +46,10 @@
     <Compile Include="Implementations\CommandFactory.cs" />
     <Compile Include="Implementations\CommandHandlerFactory.cs" />
     <Compile Include="Implementations\ConsoleCommandHandler.cs" />
+    <Compile Include="Implementations\LoginCommand.cs" />
+    <Compile Include="Implementations\NoSuchCommand.cs" />
     <Compile Include="Implementations\ShowHudCommand.cs" />
-    <Compile Include="Implementations\UserMenu.cs" />
+    <Compile Include="Implementations\UserConsoleMenu.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\ICommandFactory.cs" />
     <Compile Include="Interfaces\ICommandHandler.cs" />
@@ -58,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rialto.Data\Rialto.Data.csproj">
+      <Project>{e16e6690-028b-4e96-8a26-705d247fdc62}</Project>
+      <Name>Rialto.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

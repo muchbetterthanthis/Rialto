@@ -13,7 +13,7 @@ namespace Rialto.Implementations
         {
             if (handlerName == "console_command_handler")
             {
-                return new ConsoleCommandHandler(new UserMenu());
+                return new ConsoleCommandHandler(new UserConsoleMenu());
             }
 
             return null;

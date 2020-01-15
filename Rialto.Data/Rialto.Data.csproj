@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Bet.cs" />
-    <Compile Include="Interfaces\iDeal.cs" />
+    <Compile Include="Interfaces\IDeal.cs" />
     <Compile Include="Entities\Future.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\ILot.cs" />
+    <Compile Include="Interfaces\ILotDynamic.cs" />
     <Compile Include="LotAgregate\Lot.cs" />
     <Compile Include="LotAgregate\LotDynamic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

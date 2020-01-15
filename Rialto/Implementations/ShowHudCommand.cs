@@ -11,7 +11,7 @@ namespace Rialto.Implementations
     {
         public string Name { get; set; } = "show_hud";
 
-        public void Execute()
+        public void Execute(params object[] parameters)
         {
             Console.WriteLine("***I'M SHOWING HUD***");
         }

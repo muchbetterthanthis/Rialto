@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rialto.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rialto.Data.LotAgregate
 {
-    public class LotDynamic
+    public class LotDynamic : ILotDynamic
     {
         public int ID { get; set; }
         public DateTime DateOfChange { get; set; }

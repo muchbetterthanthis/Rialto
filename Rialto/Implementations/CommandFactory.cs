@@ -16,8 +16,16 @@ namespace Rialto.Implementations
             {
                 return new ShowHudCommand();
             }
-
-            return null;
+            if (commandName == "login")
+            {
+                return new LoginCommand();
+            }
+            else
+            {
+                return new NoSuchCommand();
+            }
         }
     }
 }
+//сюда передавать хэндлер с менюшкой
+//при создании команды ЛОГИН передавать менюшку в эту команду чтоб их связать

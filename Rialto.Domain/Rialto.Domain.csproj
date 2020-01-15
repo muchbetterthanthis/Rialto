@@ -43,11 +43,9 @@
   <ItemGroup>
     <Compile Include="Interfaces\IAddLots.cs" />
     <Compile Include="Interfaces\IChangePriceService.cs" />
-    <Compile Include="Interfaces\IShowService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ChangePriceService.cs" />
     <Compile Include="Services\LotService.cs" />
-    <Compile Include="Services\ShowConsoleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Implementations\" />

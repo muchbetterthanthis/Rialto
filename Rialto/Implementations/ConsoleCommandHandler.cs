@@ -1,4 +1,5 @@
-﻿using Rialto.Interfaces;
+﻿using Rialto.Data.Entities;
+using Rialto.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +10,35 @@ namespace Rialto.Implementations
 {
     public class ConsoleCommandHandler : ICommandHandler
     {
-        private IMenu _menu;
+        private IMenu Menu { get; set; }
         public ConsoleCommandHandler(IMenu menu)
         {
-            _menu = menu;
+            Menu = menu;
         }
 
         public void Handle()
         {
             ICommandFactory commandFactory = new CommandFactory();
+
             while (true)
             {
-                _menu.Show();
+                Menu.Show();
                 string userCommand = Console.ReadLine();
-                commandFactory.CreateCommand(userCommand).Execute();
+
+                if (userCommand == "login")
+                {
+                    commandFactory.CreateCommand(userCommand).Execute(Menu);
+                }
+                else
+                {
+                    commandFactory.CreateCommand(userCommand).Execute();
+                }
+
                 Console.ReadKey();
                 Console.Clear();
             }
         }
     }
 }
+// в фабрику команд передается команд хэндлер
+// меню - свойство, 

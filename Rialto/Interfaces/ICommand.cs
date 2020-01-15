@@ -9,6 +9,6 @@ namespace Rialto.Interfaces
     public interface ICommand
     {
         string Name { get; set; }
-        void Execute();
+        void Execute(params object[] parameters);
     }
 }
